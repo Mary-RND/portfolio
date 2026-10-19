@@ -63,16 +63,22 @@ python -m http.server 8777
 - [Pulse — трекер задач](https://mary-rnd.github.io/pulse/)
 - [FieldOps — заявки и выезды](https://mary-rnd.github.io/fieldops/)
 - [Tracker Cases — 5 сценариев](https://mary-rnd.github.io/tracker-cases/)
+- [Task Dispatcher — командный центр](https://mary-rnd.github.io/task-dispatcher/)
+- [EventFlow — участники мероприятия](https://mary-rnd.github.io/eventflow/)
+- [Route Planner — планировщик путешествий](https://mary-rnd.github.io/route-planner/)
 - [Калькулятор каркасного дома](https://mary-rnd.github.io/karkas-dom-calculator/)
 - [Пластическая хирургия — 3D-лендинг](https://mary-rnd.github.io/plastic-surgery-landing/)
 - [Лендинг вебинара по ИИ-аналитике](https://mary-rnd.github.io/vebinar-ii-analitik-landing/)
+- [Дашборд закупок MedTech](https://mary-rnd.github.io/procurement-demo/)
 - [Аналитика рынка инфузионных насосов](https://mary-rnd.github.io/infusion-pumps-dashboard/)
 - [ИИ-бот для VK](https://github.com/Mary-RND/vk-ai-assistant)
 
 ## Контакты
 
+- Telegram: [@marypetrova6](https://t.me/marypetrova6)
+- VK: [@marina_petrushina](https://vk.com/marina_petrushina)
+- WhatsApp: [+7 (985) 728-66-55](https://wa.me/79857286655)
 - Email: [mar.petrushina@yandex.ru](mailto:mar.petrushina@yandex.ru)
-- Телефон: [+7 (985) 728-66-55](tel:+79857286655)
 - GitHub: [@Mary-RND](https://github.com/Mary-RND)
 
 ## Лицензия
