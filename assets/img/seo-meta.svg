@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-label="Обложка кейса: метатеги и ALT">
+  <rect width="1280" height="800" fill="#f6f2ea"/>
+  <rect x="90" y="90" width="1100" height="620" rx="22" fill="#fffdf8" stroke="#dbd3c5" stroke-width="2"/>
+  <text x="150" y="200" font-family="system-ui, sans-serif" font-size="22" fill="#5e6168">поисковая строка</text>
+  <rect x="150" y="220" width="960" height="56" rx="28" fill="#f6f2ea" stroke="#dbd3c5"/>
+  <text x="180" y="256" font-family="system-ui, sans-serif" font-size="23" fill="#15171c">детская студия рисования в Москве — KiSTOCHKA</text>
+  <rect x="150" y="316" width="560" height="26" rx="6" fill="#0e7c66" opacity="0.85"/>
+  <text x="150" y="336" font-family="system-ui, sans-serif" font-size="24" fill="#0e7c66" opacity="0">title</text>
+  <text x="150" y="334" font-family="system-ui, sans-serif" font-size="23" fill="#15171c">Название страницы до 60 знаков с ключом</text>
+  <rect x="150" y="356" width="820" height="14" rx="7" fill="#e7e0d2"/>
+  <rect x="150" y="384" width="760" height="14" rx="7" fill="#e7e0d2"/>
+  <text x="150" y="452" font-family="Georgia, serif" font-size="40" font-weight="bold" fill="#15171c">Метатеги и ALT всей страницы</text>
+  <g font-family="system-ui, sans-serif" font-size="20" fill="#15171c">
+    <rect x="150" y="500" width="230" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="172" y="530">title · description</text>
+    <rect x="400" y="500" width="220" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="422" y="530">H1 · структура</text>
+    <rect x="640" y="500" width="210" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="662" y="530">ALT картинок</text>
+  </g>
+  <text x="150" y="610" font-family="system-ui, sans-serif" font-size="20" fill="#5e6168">SEO-обвязка Tilda-сайта · 12 страниц · 35 минут</text>
+  <text x="150" y="660" font-family="system-ui, sans-serif" font-size="20" fill="#5e6168">отдельная услуга — 2 500–3 500 ₽</text>
+</svg>

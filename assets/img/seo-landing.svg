@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-label="Обложка кейса: посадочная страница веб-дизайнера">
+  <rect width="1280" height="800" fill="#f6f2ea"/>
+  <rect x="90" y="90" width="1100" height="620" rx="22" fill="#fffdf8" stroke="#dbd3c5" stroke-width="2"/>
+  <rect x="90" y="90" width="1100" height="64" rx="22" fill="#efe9de"/>
+  <rect x="90" y="132" width="1100" height="22" fill="#efe9de"/>
+  <circle cx="132" cy="122" r="9" fill="#e5524b"/>
+  <circle cx="164" cy="122" r="9" fill="#e7b04a"/>
+  <circle cx="196" cy="122" r="9" fill="#0e7c66"/>
+  <rect x="236" y="106" width="560" height="32" rx="16" fill="#f6f2ea" stroke="#dbd3c5"/>
+  <text x="256" y="128" font-family="Georgia, serif" font-size="19" fill="#5e6168">glavnaya-stranitsa-veb-dizaynera.ru</text>
+  <text x="150" y="260" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="#15171c">Текст главной страницы</text>
+  <text x="150" y="322" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="#15171c">для веб-дизайнера</text>
+  <rect x="150" y="360" width="720" height="14" rx="7" fill="#e7e0d2"/>
+  <rect x="150" y="392" width="640" height="14" rx="7" fill="#e7e0d2"/>
+  <rect x="150" y="424" width="690" height="14" rx="7" fill="#e7e0d2"/>
+  <rect x="150" y="470" width="230" height="52" rx="26" fill="#0e7c66"/>
+  <text x="182" y="503" font-family="system-ui, sans-serif" font-size="22" fill="#fffdf8">Обсудить проект</text>
+  <g font-family="system-ui, sans-serif" font-size="20" fill="#15171c">
+    <rect x="150" y="570" width="330" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="172" y="600">создание сайта веб-дизайнера</text>
+    <rect x="500" y="570" width="300" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="522" y="600">дизайн сайта под ключ</text>
+  </g>
+  <text x="150" y="672" font-family="system-ui, sans-serif" font-size="20" fill="#5e6168">SEO-текст · Kwork · 4 500 знаков · 1 ч 45 мин</text>
+</svg>

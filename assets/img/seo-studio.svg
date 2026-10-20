@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-label="Обложка кейса: статьи для арт-студии">
+  <rect width="1280" height="800" fill="#f6f2ea"/>
+  <rect x="90" y="90" width="1100" height="620" rx="22" fill="#fffdf8" stroke="#dbd3c5" stroke-width="2"/>
+  <text x="150" y="220" font-family="system-ui, sans-serif" font-size="22" fill="#5e6168">kistochka-studio.ru · блог</text>
+  <text x="150" y="290" font-family="Georgia, serif" font-size="46" font-weight="bold" fill="#15171c">6 статей для арт-студии</text>
+  <text x="150" y="348" font-family="Georgia, serif" font-size="46" font-weight="bold" fill="#15171c">+ чистка старых текстов</text>
+  <g font-family="system-ui, sans-serif" font-size="21" fill="#15171c">
+    <rect x="150" y="392" width="470" height="46" rx="10" fill="#f6f2ea" stroke="#dbd3c5"/>
+    <text x="170" y="422">01 · Что рисуют на семейных занятиях</text>
+    <rect x="150" y="452" width="470" height="46" rx="10" fill="#f6f2ea" stroke="#dbd3c5"/>
+    <text x="170" y="482">02 · Как выбрать студию рисования</text>
+    <rect x="650" y="392" width="470" height="46" rx="10" fill="#f6f2ea" stroke="#dbd3c5"/>
+    <text x="670" y="422">03 · Городской пленэра: гид</text>
+    <rect x="650" y="452" width="470" height="46" rx="10" fill="#f6f2ea" stroke="#dbd3c5"/>
+    <text x="670" y="482">04–06 · …ещё три материала</text>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="20" fill="#15171c">
+    <rect x="150" y="560" width="320" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="172" y="590">статьи для сайта с SEO</text>
+    <rect x="490" y="560" width="330" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="512" y="590">редактура контента сайта</text>
+  </g>
+  <text x="150" y="672" font-family="system-ui, sans-serif" font-size="20" fill="#5e6168">SEO-статьи · Kwork · 6 материалов · 50 минут</text>
+</svg>

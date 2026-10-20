@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-label="Обложка кейса: статья о тормозных колодках">
+  <rect width="1280" height="800" fill="#f6f2ea"/>
+  <rect x="90" y="90" width="1100" height="620" rx="22" fill="#fffdf8" stroke="#dbd3c5" stroke-width="2"/>
+  <rect x="90" y="90" width="1100" height="64" rx="22" fill="#efe9de"/>
+  <rect x="90" y="132" width="1100" height="22" fill="#efe9de"/>
+  <circle cx="132" cy="122" r="9" fill="#e5524b"/>
+  <circle cx="164" cy="122" r="9" fill="#e7b04a"/>
+  <circle cx="196" cy="122" r="9" fill="#0e7c66"/>
+  <rect x="236" y="106" width="620" height="32" rx="16" fill="#f6f2ea" stroke="#dbd3c5"/>
+  <text x="256" y="128" font-family="Georgia, serif" font-size="19" fill="#5e6168">blog/7-priznakov-iznosa-tormoznyh-kolodok</text>
+  <text x="150" y="248" font-family="Georgia, serif" font-size="46" font-weight="bold" fill="#15171c">7 признаков износа</text>
+  <text x="150" y="306" font-family="Georgia, serif" font-size="46" font-weight="bold" fill="#15171c">тормозных колодок</text>
+  <text x="150" y="356" font-family="system-ui, sans-serif" font-size="24" fill="#0e7c66" font-weight="600">H2 · Как понять, что пора менять колодки</text>
+  <rect x="150" y="388" width="760" height="14" rx="7" fill="#e7e0d2"/>
+  <rect x="150" y="420" width="700" height="14" rx="7" fill="#e7e0d2"/>
+  <text x="150" y="470" font-family="system-ui, sans-serif" font-size="24" fill="#0e7c66" font-weight="600">H3 · Три способа проверить остаток накладки</text>
+  <rect x="150" y="502" width="730" height="14" rx="7" fill="#e7e0d2"/>
+  <rect x="150" y="534" width="660" height="14" rx="7" fill="#e7e0d2"/>
+  <g font-family="system-ui, sans-serif" font-size="20" fill="#15171c">
+    <rect x="150" y="580" width="300" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="172" y="610">когда менять колодки</text>
+    <rect x="470" y="580" width="290" height="46" rx="23" fill="#f6f2ea" stroke="#0e7c66"/>
+    <text x="492" y="610">признаки износа колодок</text>
+  </g>
+  <text x="150" y="672" font-family="system-ui, sans-serif" font-size="20" fill="#5e6168">SEO-статья · HTML-разметка · 7 000 знаков · 1 ч 25 мин</text>
+</svg>
