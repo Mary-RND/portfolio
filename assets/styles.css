@@ -462,6 +462,21 @@ ol {
   flex-wrap: wrap;
   gap: 12px;
 }
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 4px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--emerald);
+}
+.hero-link span {
+  transition: transform 0.2s;
+}
+.hero-link:hover span {
+  transform: translate(2px, -2px);
+}
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -782,6 +797,113 @@ ol {
 }
 .service-card-accent .btn {
   align-self: flex-start;
+}
+
+/* ---------- Специализация ---------- */
+.focus {
+  background: linear-gradient(180deg, #f1ece3 0%, var(--paper) 100%);
+}
+.focus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.focus-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s, border-color 0.35s;
+}
+.focus-card:hover {
+  transform: translateY(-4px);
+  border-color: #c9bfae;
+  box-shadow: 0 26px 60px rgba(21, 23, 28, 0.08);
+}
+.focus-card-med {
+  background:
+    radial-gradient(420px 260px at 100% 0%, rgba(14, 124, 102, 0.16), transparent 70%),
+    var(--white);
+}
+.focus-card-analytics {
+  background:
+    radial-gradient(420px 260px at 100% 0%, rgba(229, 82, 75, 0.13), transparent 70%),
+    var(--white);
+}
+.focus-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(14, 124, 102, 0.1);
+  color: var(--emerald);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.focus-card-analytics .focus-badge {
+  background: rgba(229, 82, 75, 0.1);
+  color: var(--coral-dark);
+}
+.focus-card h3 {
+  margin: 22px 0 10px;
+  font-size: clamp(24px, 2.4vw, 30px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+.focus-card > p {
+  max-width: 46ch;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.focus-list {
+  display: grid;
+  gap: 8px;
+  margin: 24px 0 28px;
+}
+.focus-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.focus-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--emerald);
+}
+.focus-card-analytics .focus-list li::before {
+  background: var(--coral);
+}
+.focus-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--emerald);
+}
+.focus-link span {
+  transition: transform 0.2s;
+}
+.focus-link:hover span {
+  transform: translate(2px, -2px);
 }
 
 /* ---------- Кейсы ---------- */
@@ -1554,6 +1676,24 @@ ol {
   flex-wrap: wrap;
   margin-top: 2px;
 }
+.form-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.form-buttons .btn {
+  padding: 12px 18px;
+  font-size: 13px;
+}
+.contact-form .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: var(--paper);
+}
+.contact-form .btn-ghost:hover {
+  border-color: var(--emerald-soft);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--paper);
+}
 .form-note {
   max-width: 32ch;
   font-size: 10.5px;
@@ -2080,6 +2220,24 @@ ol {
   }
   .case-modal {
     width: 94vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+  .focus-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .focus-card {
+    padding: 24px;
+  }
+  .form-buttons {
+    width: 100%;
   }
 }
 

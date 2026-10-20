@@ -147,6 +147,42 @@
       alt: "Дашборд закупок медицинских изделий",
       demo: "https://mary-rnd.github.io/procurement-demo/",
       code: "https://github.com/Mary-RND"
+    },
+    sport: {
+      title: "Лендинг вебинара «5 привычек»",
+      kicker: "Спорт-ленд · бесплатный вебинар",
+      short: "Прогрев на вебинар: боли, программа на 3 месяца, кейсы до/после и форма записи.",
+      task:
+        "Собрать регистрации на бесплатный вебинар фитнес-клуба: тёплый editorial-дизайн, понятная структура прогрева и форма без конструктора.",
+      solution:
+        "Одностраничный лендинг на чистом HTML/CSS/JS: оффер, боли ЦА, программа на 3 месяца, кейсы до/после, форма регистрации. Oswald + Playfair Display, бежево-коричневая палитра.",
+      result:
+        "Живой лендинг на GitHub Pages: адаптив, быстрая загрузка, форма записи. Структура собрана под один оффер — без лишних блоков.",
+      facts: ["1 оффер", "3 месяца", "до/после", "форма"],
+      stack: "HTML5 · CSS3 · JavaScript · GitHub Pages",
+      price: "от 15 000 ₽ · срок 3–5 дней",
+      img: "assets/img/sport.webp",
+      alt: "Лендинг вебинара «5 привычек» для Спорт-ленд",
+      demo: "https://mary-rnd.github.io/sport-land-v2-landing/",
+      code: "https://github.com/Mary-RND/sport-land-v2-landing"
+    },
+    infusion: {
+      title: "Дашборд рынка инфузионных насосов",
+      kicker: "MedTech · аналитика закупок · 2025–2026",
+      short: "Конкуренты, цены и 200 закупок на одном экране — без Excel.",
+      task:
+        "Нужно было собрать картину рынка инфузионных насосов: кто лидирует, какие цены и где сосредоточен спрос. Данные лежали в выгрузках закупок.",
+      solution:
+        "Python-пайплайн на pandas + SQLite: очистка, нормализация и расчёт KPI. Статический дашборд на HTML/CSS/JS: лидеры, ценовой коридор, география, 200 сделок, 108 больниц, 59 регионов.",
+      result:
+        "Один экран вместо десятков выгрузок: видно лидеров, ценовой коридор и концентрацию спроса. Дашборд работает офлайн после скачивания.",
+      facts: ["200 сделок", "108 больниц", "59 регионов", "pandas"],
+      stack: "Python · pandas · SQLite · HTML/CSS/JS",
+      price: "от 25 000 ₽ · срок 5–7 дней",
+      img: "assets/img/infusion.webp",
+      alt: "Дашборд рынка инфузионных насосов",
+      demo: "https://mary-rnd.github.io/infusion-pumps-dashboard/",
+      code: "https://github.com/Mary-RND/infusion-pumps-dashboard"
     }
   };
 
@@ -275,21 +311,32 @@
   /* ---------- Фильтры кейсов ---------- */
   var filters = Array.prototype.slice.call(document.querySelectorAll(".filter"));
   var cards = Array.prototype.slice.call(document.querySelectorAll(".case-card"));
+
+  function applyFilter(value) {
+    filters.forEach(function (b) {
+      var active = b.getAttribute("data-filter") === value;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    cards.forEach(function (card) {
+      var cats = (card.getAttribute("data-cat") || "").split(/\s+/);
+      var show = value === "all" || cats.indexOf(value) !== -1;
+      card.classList.toggle("is-hidden", !show);
+      if (show) {
+        card.classList.add("is-visible");
+      }
+    });
+  }
+
   filters.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      var value = btn.getAttribute("data-filter");
-      filters.forEach(function (b) {
-        var active = b === btn;
-        b.classList.toggle("is-active", active);
-        b.setAttribute("aria-selected", active ? "true" : "false");
-      });
-      cards.forEach(function (card) {
-        var show = value === "all" || card.getAttribute("data-cat") === value;
-        card.classList.toggle("is-hidden", !show);
-        if (show) {
-          card.classList.add("is-visible");
-        }
-      });
+      applyFilter(btn.getAttribute("data-filter"));
+    });
+  });
+
+  document.querySelectorAll("[data-filter-link]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      applyFilter(link.getAttribute("data-filter-link"));
     });
   });
 
@@ -375,10 +422,11 @@
     });
   }
 
-  /* ---------- Форма ---------- */
+  /* ---------- Форма: письмо в почтовом клиенте ---------- */
   var form = document.getElementById("lead-form");
   var status = document.getElementById("form-status");
-  var submitBtn = document.getElementById("submit-btn");
+  var copyBtn = document.getElementById("copy-lead");
+  var EMAIL = "mar.petrushina@yandex.ru";
 
   function setStatus(text, isError) {
     status.textContent = text;
@@ -390,6 +438,76 @@
     if (wrap) wrap.classList.toggle("has-error", hasError);
   }
 
+  function leadData() {
+    return {
+      name: form.elements.name.value.trim(),
+      contact: form.elements.contact.value.trim(),
+      task: form.elements.task.value,
+      budget: form.elements.budget.value || "не указан",
+      message: form.elements.message.value.trim() || "—"
+    };
+  }
+
+  function leadText(data) {
+    return [
+      "Имя: " + data.name,
+      "Контакт: " + data.contact,
+      "Задача: " + data.task,
+      "Бюджет: " + data.budget,
+      "",
+      "Описание:",
+      data.message
+    ].join("\n");
+  }
+
+  function leadSubject(data) {
+    return "Заявка с сайта-портфолио: " + data.task;
+  }
+
+  function mailtoHref(data) {
+    return (
+      "mailto:" +
+      EMAIL +
+      "?subject=" +
+      encodeURIComponent(leadSubject(data)) +
+      "&body=" +
+      encodeURIComponent(leadText(data))
+    );
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.position = "fixed";
+      area.style.top = "-1000px";
+      document.body.appendChild(area);
+      area.select();
+      try {
+        document.execCommand("copy");
+        resolve();
+      } catch (err) {
+        reject(err);
+      } finally {
+        document.body.removeChild(area);
+      }
+    });
+  }
+
+  function validateLead() {
+    var valid = true;
+    [form.elements.name, form.elements.contact, form.elements.task].forEach(function (field) {
+      var bad = !field.value.trim();
+      markError(field, bad);
+      if (bad) valid = false;
+    });
+    return valid ? leadData() : null;
+  }
+
   if (form) {
     form.addEventListener("input", function (e) {
       if (e.target.matches("input, select, textarea")) markError(e.target, false);
@@ -397,67 +515,46 @@
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-
-      var name = form.elements.name;
-      var contact = form.elements.contact;
-      var task = form.elements.task;
-      var budget = form.elements.budget;
-      var message = form.elements.message;
-      var valid = true;
-
-      [name, contact, task].forEach(function (field) {
-        var bad = !field.value.trim();
-        markError(field, bad);
-        if (bad) valid = false;
-      });
-
-      if (!valid) {
+      var data = validateLead();
+      if (!data) {
         setStatus("Заполните имя, контакт и тип задачи — этого достаточно.", true);
         return;
       }
-
-      var payload = {
-        name: name.value.trim(),
-        contact: contact.value.trim(),
-        task: task.value,
-        budget: budget.value || "не указан",
-        message: message.value.trim() || "—",
-        _subject: "Заявка с сайта-портфолио",
-        _template: "table",
-        _captcha: "false"
-      };
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Отправляю…";
-      setStatus("Отправляю задачу…", false);
-
-      fetch("https://formsubmit.co/ajax/mar.petrushina@yandex.ru", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload)
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          return res.json();
-        })
-        .then(function () {
-          form.reset();
-          setStatus("Спасибо! Задача ушла. Отвечу в течение дня — обычно быстрее.", false);
-          submitBtn.textContent = "Отправлено";
-          setTimeout(function () {
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Отправить задачу";
-          }, 4000);
-        })
-        .catch(function () {
-          setStatus(
-            "Не получилось отправить форму. Напишите напрямую: mar.petrushina@yandex.ru — так даже надёжнее.",
-            true
-          );
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Отправить задачу";
-        });
+      window.location.href = mailtoHref(data);
+      setStatus(
+        "Открываю почтовый клиент с готовым письмом. Если он не открылся — нажмите «Скопировать заявку» и отправьте на " +
+          EMAIL +
+          ".",
+        false
+      );
     });
+
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        var data = validateLead();
+        if (!data) {
+          setStatus("Заполните имя, контакт и тип задачи — этого достаточно.", true);
+          return;
+        }
+        copyText(leadText(data))
+          .then(function () {
+            setStatus(
+              "Заявка скопирована. Вставьте её в письмо на " + EMAIL + " или в Telegram.",
+              false
+            );
+            copyBtn.textContent = "Скопировано";
+            setTimeout(function () {
+              copyBtn.textContent = "Скопировать заявку";
+            }, 2500);
+          })
+          .catch(function () {
+            setStatus(
+              "Не получилось скопировать автоматически. Выделите текст заявки и скопируйте вручную.",
+              true
+            );
+          });
+      });
+    }
   }
 
   /* ---------- Выбор пакета в форме ---------- */
