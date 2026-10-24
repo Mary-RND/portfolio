@@ -888,6 +888,20 @@ ol {
 .focus-card-analytics .focus-list li::before {
   background: var(--coral);
 }
+.focus-card-invest {
+  grid-column: 1 / -1;
+  min-height: 0;
+  background:
+    radial-gradient(520px 300px at 100% 0%, rgba(107, 91, 200, 0.14), transparent 70%),
+    var(--white);
+}
+.focus-card-invest .focus-badge {
+  background: rgba(107, 91, 200, 0.1);
+  color: #5646b5;
+}
+.focus-card-invest .focus-list li::before {
+  background: #6b5bc8;
+}
 .focus-link {
   display: inline-flex;
   align-items: center;
