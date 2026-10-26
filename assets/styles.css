@@ -1962,6 +1962,16 @@ ol {
   .container {
     width: calc(100% - 40px);
   }
+  .header {
+    /* backdrop-filter у fixed-шапки превращает её в containing block
+       и сжимает fixed-меню до высоты шапки */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--paper);
+  }
+  .header.is-scrolled {
+    background: var(--paper);
+  }
   .nav {
     position: fixed;
     top: 78px;
@@ -2056,7 +2066,8 @@ ol {
   }
   .pains-grid,
   .cases-grid,
-  .packages-grid {
+  .packages-grid,
+  .services-grid {
     grid-template-columns: 1fr;
   }
   .section-head-row {
